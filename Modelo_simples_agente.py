@@ -1,10 +1,10 @@
-MAX_PASSOS = 5
+MAX_PASSOS = 5 #Limite máximo de loops
 
-def consultar_pedido(pedido_id):
-    return f"Pedido {pedido_id}: atraso de 45 min"
+def consultar_pedido(pedido_id): #Função que recebe o ID do pedido
+    return f"Pedido {pedido_id}: atraso de 45 min" #Retorna um aviso pré definido de atraso com o ID do pedido
 
-def escalar_humano(mensagens):
-    return "Encaminhado para um atendente humano."
+def escalar_humano(mensagens): #Função que recebe o histórico de mansagens, mneste caso, essa função servirá como fallback caso, em 5 loops, o modelo não resolva 
+    return "Encaminhado para um atendente humano." #Aviso de encaminhamento para o atendente 
 
 ferramentas = {"consultar_pedido": consultar_pedido}
 
